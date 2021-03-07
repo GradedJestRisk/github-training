@@ -1,0 +1,22 @@
+{
+  "name": "github-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:fake-success",
+    "test:fake-success": "exit 0",
+    "test:fake-failure": "exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GradedJestRisk/github-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GradedJestRisk/github-training/issues"
+  },
+  "homepage": "https://github.com/GradedJestRisk/github-training#readme"
+}
