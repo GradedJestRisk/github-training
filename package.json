@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:fake-success",
+    "test": "npm run test:fake-failure",
     "test:fake-success": "exit 0",
     "test:fake-failure": "exit 1"
   },
