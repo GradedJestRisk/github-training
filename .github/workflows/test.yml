@@ -2,20 +2,32 @@ name: Test
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ main ]
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
-  build:
+  checkout-test:
 
     runs-on: ubuntu-latest
 
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
+      - name: Fake output to check formating
+        run: echo Hello, world!
+
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '15.x'
-      - run: npm ci
-      - run: npm test
+
+      - name: install modules
+        run: npm ci
+
+      - name: test
+        run: npm test
