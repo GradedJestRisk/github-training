@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: automerge
-        uses: "pascalgn/automerge-action"
+        uses: "pascalgn/automerge-action@master"
         env:
+          GITHUB_TOKEN: "${{ secrets.EXTERNAL_GITHUB_TOKEN }}"
           MERGE_LABELS: ":rocket: Ready to Merge"
           MERGE_COMMIT_MESSAGE: "pull-request-title"
           UPDATE_LABELS: ":rocket: Ready to Merge"
