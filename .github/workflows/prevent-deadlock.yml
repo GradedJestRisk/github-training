@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Prevent database migration deadlock
+    steps:
+      - name: Checkout repository (no shallow)
+        uses: actions/checkout@v2
+        with:
+          # https://github.com/actions/checkout#usage
+          fetch-depth: 0
+      - name: Look for migrations
+        uses: GradedJestRisk/prevent-database-migration-deadlock@v1.3
+        with:
+          migration-directory: 'migrations'
