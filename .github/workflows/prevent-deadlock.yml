@@ -12,5 +12,6 @@ jobs:
           fetch-depth: 0
       - name: Look for migrations
         uses: GradedJestRisk/prevent-database-migration-deadlock@v1.3
+        continue-on-error: true
         with:
           migration-directory: 'migrations'
