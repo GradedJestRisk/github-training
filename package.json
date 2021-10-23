@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run wait-a-minute && npm run test:fake-success",
-    "wait-a-minute": "wait 1m",
+    "wait-a-minute": "sleep 1m",
     "test:fake-success": "exit 0",
     "test:fake-failure": "exit 1"
   },
